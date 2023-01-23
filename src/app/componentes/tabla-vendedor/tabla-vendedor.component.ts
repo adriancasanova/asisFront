@@ -4,10 +4,9 @@ import {
   OnInit,
   Optional,
 } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { HelperServiceService } from 'src/app/servicios/helper-service.service';
-import { TablaRecepcionService } from 'src/app/servicios/tabla-recepcion.service';
+import { HelperServiceService } from '../../servicios/helper-service.service';
+import { TablaRecepcionService } from '../../servicios/tabla-recepcion.service';
 
 
 @Component({
