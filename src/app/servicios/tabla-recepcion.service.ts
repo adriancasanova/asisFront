@@ -25,21 +25,5 @@ export class TablaRecepcionService {
     );
   }
 
-  updateTablaRecepciont(ingresoPersona: IngresoPersona, id: number) {
-    return this.http
-      .put<IngresoPersona[]>(this.apiUrl + id, ingresoPersona)
-      .pipe(
-        map((res: any) => {
-          return res;
-        })
-      );
-  }
 
-  deleteTablaRecepcion(id: number) {
-    return this.http.delete<IngresoPersona[]>(this.apiUrl + id).pipe(
-      map((res: any) => {
-        return res;
-      })
-    );
-  }
 }

@@ -24,13 +24,6 @@ export class HelperServiceService {
       })
     );
   }
-  deleteHoraIngreso(id: number) {
-    return this.http.delete(this.apiUrl + id).pipe(
-      map((res: any) => {
-        return res;
-      })
-    );
-  }
 
   postHoraIngreso(arrayIngreso: ArrayIngreso) {
     console.log(arrayIngreso);
@@ -42,11 +35,5 @@ export class HelperServiceService {
     );
   }
 
-  deleteTablaRecepcion(id: number) {
-    return this.http.delete(this.apiUrl + id).pipe(
-      map((res: any) => {
-        return res;
-      })
-    );
-  }
+
 }

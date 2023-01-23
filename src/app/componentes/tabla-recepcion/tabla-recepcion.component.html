@@ -1,10 +1,7 @@
 <div class="centrar">
-  <app-aside></app-aside>
+
 
   <div class="section">
-    <app-formulario-ingreso
-      (messageEvent)="receiveMessage($event)"
-    ></app-formulario-ingreso>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <button
         class="btn btn-danger btn-notificar-vendedor me-md-5"
@@ -21,10 +18,7 @@
           type="search"
           placeholder="Buscar"
           name="filterPost"
-          aria-label="Search"
-          [(ngModel)]="filterPost"
-          [ngModel]="inputBuscar"
-          (ngModelChange)="inputBuscar = $event.toUpperCase()"
+          aria-label="Search"      
         />
       </div>
 
@@ -45,7 +39,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let data of recepcionData | filter : filterPost">
+            <tr *ngFor="let data of recepcionData">
               <th scope="row">{{ data.nro }}</th>
               <td>{{ data.tipoDeProspecto }}</td>
               <td>{{ data.nombreApellido }}</td>

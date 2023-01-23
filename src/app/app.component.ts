@@ -1,6 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { HelperServiceService } from './servicios/helper-service.service';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -8,24 +7,17 @@ import { HelperServiceService } from './servicios/helper-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  @Output() mensajePrueba = new EventEmitter();
+
   title = 'ASIS';
-  messageVenta!: string;
-  parentMessage = "message from parent"
-  constructor(private helperService: HelperServiceService, private router: Router) {
+ 
+  constructor() {
 
   }
 
   ngOnInit(): void {  
-    this.helperService.customMessage.subscribe(msg => {
-      this.messageVenta = msg;   
-      this.parentMessage = msg;
-      console.log("mensaje" + this.parentMessage);
-    });
+   
   }
 
-  Logueado(route: string) {
-    return this.router.url === route;
-  }
+  
 
 }
