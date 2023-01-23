@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { TablaRecepcionService } from 'src/app/servicios/tabla-recepcion.service';
+import { TablaRecepcionService } from '../../servicios/tabla-recepcion.service';
 @Component({
   selector: 'app-recepcion',
   templateUrl: './recepcion.component.html',
